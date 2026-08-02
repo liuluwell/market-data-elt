@@ -11,13 +11,15 @@ import os
 import time
 import logging
 from datetime import datetime, timedelta
+import math
+
 
 from dotenv import load_dotenv
 import akshare as ak
 import pandas as pd
 import psycopg
 
-from config import STOCK_POOL, LOOKBACK_DAYS, REQUEST_INTERVAL, DATA_SOURCE_PRIORITY
+from ingestion.config import STOCK_POOL, LOOKBACK_DAYS, REQUEST_INTERVAL, DATA_SOURCE_PRIORITY
 
 load_dotenv()
 
@@ -32,6 +34,13 @@ DB_CONFIG = dict(
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
+def safe_value(v):
+    """把 NaN/None 统一转成 Python 的 None,避免 NaN 被当成字符串存进数据库。"""
+    if v is None:
+        return None
+    if isinstance(v, float) and math.isnan(v):
+        return None
+    return v
 
 def to_market_prefixed_symbol(symbol: str) -> str:
     """纯数字代码转带市场前缀的格式(腾讯/新浪接口需要)。"""
@@ -82,7 +91,7 @@ def fetch_from_tx(symbol: str, start_date: str, end_date: str):
         "date": "日期", "open": "开盘", "close": "收盘",
         "high": "最高", "low": "最低", "amount": "成交额",
     })
-    df["成交量"] = df["volume"] / 100          # 股 -> 手,和东财口径对齐
+    df["成交量"] = df["volume"]          # 股 -> 手,和东财口径对齐 腾讯的接口单位本来就是手
     df["换手率"] = df["turnover"] * 100         # 小数 -> 百分比,和东财口径对齐
     df = add_derived_fields(df)                # 自算涨跌幅等
     df["turnover_rate"] = df["换手率"]
@@ -135,9 +144,10 @@ def insert_stock_data(conn, symbol: str, df):
                     fetched_at = now();
                 """,
                 (
-                    symbol, row["日期"], row["开盘"], row["收盘"], row["最高"], row["最低"],
-                    row["成交量"], row["成交额"], row["振幅"], row["涨跌幅"],
-                    row["涨跌额"], row["turnover_rate"], row["data_source"]
+                    symbol, safe_value(row["日期"]), safe_value(row["开盘"]), safe_value(row["收盘"]),
+                    safe_value(row["最高"]), safe_value(row["最低"]), safe_value(row["成交量"]),
+                    safe_value(row["成交额"]), safe_value(row["振幅"]), safe_value(row["涨跌幅"]),
+                    safe_value(row["涨跌额"]), safe_value(row["turnover_rate"]), row["data_source"]
                 )
             )
             rows_inserted += 1

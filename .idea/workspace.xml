@@ -4,25 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11550465-ce35-4094-b006-28ac55a6af8f" name="Changes" comment="">
+    <list default="true" id="11550465-ce35-4094-b006-28ac55a6af8f" name="Changes" comment="stock_data_pro first commit">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/stock_data_analysis.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dif_interface_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fetch_stk_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fetch_stock.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/1.raw_stock_daily.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/2.raw_stock_basic_info.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stk.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_akshare.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_dbt/dbt_project.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_dbt/models/stagings/source.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_dbt/models/stagings/stg_stock_daily.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dif_interface_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/dif_interface_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetch_stk_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/fetch_stk_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetch_stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion/fetch_stock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/1.raw_stock_daily.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion/sql/1.raw_stock_daily.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/2.raw_stock_basic_info.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion/sql/2.raw_stock_basic_info.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stk.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/stk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_akshare.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_akshare.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +29,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="15" />
+    <option name="cachedIndexableFilesCount" value="24" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,29 +41,41 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;liuluwell&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/liuluwell/stock_data_analysis.git&quot;,
+    &quot;accountId&quot;: &quot;ff7d541a-54b8-4515-9a1a-a7e371e892e9&quot;
+  }
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.0000000000899092" />
-      <entry key="M2" value="1.0000134090315844" />
-      <entry key="M5" value="1.0170440303033643" />
-      <entry key="M10" value="1.184629632801789" />
-      <entry key="M15" value="1.408648098405463" />
-      <entry key="M30" value="1.944145451350923" />
-      <entry key="H1" value="3.0621328520335607" />
-      <entry key="H2" value="5.687410672778744" />
-      <entry key="H4" value="9.10167060623926" />
-      <entry key="D1" value="14.484902934415732" />
-      <entry key="W1" value="15.772354796382295" />
+      <entry key="MS100" value="1.0089183285122019" />
+      <entry key="MS500" value="1.500347050651707" />
+      <entry key="S2" value="3.00281252611563" />
+      <entry key="S5" value="4.295415395560866" />
+      <entry key="S10" value="5.359421498045559" />
+      <entry key="S30" value="6.793421554158893" />
+      <entry key="S60" value="7.339125499881249" />
+      <entry key="M2" value="7.653454154281475" />
+      <entry key="M5" value="7.873100116402058" />
+      <entry key="M10" value="8.415184264006243" />
+      <entry key="M15" value="9.478884213640464" />
+      <entry key="M30" value="12.761857239366345" />
+      <entry key="H1" value="16.46251074610819" />
+      <entry key="H2" value="19.401441273238042" />
+      <entry key="H4" value="22.397571428003893" />
+      <entry key="D1" value="33.24514878870795" />
+      <entry key="W1" value="38.0329462054981" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -72,37 +83,37 @@
       <entry key="S2" value="0.0" />
       <entry key="S5" value="0.0" />
       <entry key="S10" value="0.0" />
-      <entry key="S30" value="2.972976212322119E-147" />
-      <entry key="S60" value="9.074988801903587E-74" />
-      <entry key="M2" value="5.754115160313771E-37" />
-      <entry key="M5" value="7.258388823819497E-15" />
-      <entry key="M10" value="1.7012395624365855E-7" />
-      <entry key="M15" value="4.872089402922325E-5" />
-      <entry key="M30" value="0.01395771666052046" />
-      <entry key="H1" value="0.23627569812227278" />
-      <entry key="H2" value="0.9721538793139346" />
-      <entry key="H4" value="1.971952174609304" />
-      <entry key="D1" value="3.555215247097349" />
-      <entry key="W1" value="3.9332046675174492" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="3.8626055744294654E-269" />
+      <entry key="M2" value="1.1871228978728242E-134" />
+      <entry key="M5" value="6.118529836555692E-54" />
+      <entry key="M10" value="4.9393397534186346E-27" />
+      <entry key="M15" value="4.602398293805566E-18" />
+      <entry key="M30" value="4.289916642451703E-9" />
+      <entry key="H1" value="1.309894422110368E-4" />
+      <entry key="H2" value="0.022889886141049972" />
+      <entry key="H4" value="0.3025872938457107" />
+      <entry key="D1" value="2.601307050510273" />
+      <entry key="W1" value="3.7615297898715285" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7845840978967508" />
-      <entry key="MS500" value="0.9526379980439373" />
-      <entry key="S2" value="0.987943197140516" />
-      <entry key="S5" value="0.9951597218200828" />
-      <entry key="S10" value="0.9975769252644544" />
-      <entry key="S30" value="0.9991916551761939" />
-      <entry key="S60" value="0.9995957459672926" />
-      <entry key="M2" value="0.9998112603789262" />
-      <entry key="M5" value="1.0169625761586294" />
-      <entry key="M10" value="1.1845861687723402" />
-      <entry key="M15" value="1.4086645314050326" />
-      <entry key="M30" value="1.957997020609851" />
-      <entry key="H1" value="3.297659132686106" />
-      <entry key="H2" value="6.65803961328336" />
-      <entry key="H4" value="11.072079109196476" />
-      <entry key="D1" value="18.039654710395" />
-      <entry key="W1" value="19.705486220893857" />
+      <entry key="MS100" value="0.9415289301539543" />
+      <entry key="MS500" value="1.481695875887743" />
+      <entry key="S2" value="2.9938558953571386" />
+      <entry key="S5" value="4.289461203782607" />
+      <entry key="S10" value="5.354933435414369" />
+      <entry key="S30" value="6.791093416847096" />
+      <entry key="S60" value="7.337790462287518" />
+      <entry key="M2" value="7.652736339487112" />
+      <entry key="M5" value="7.872787476949806" />
+      <entry key="M10" value="8.414840350131724" />
+      <entry key="M15" value="9.47838082596767" />
+      <entry key="M30" value="12.761175269668627" />
+      <entry key="H1" value="16.46205652996004" />
+      <entry key="H2" value="19.423910168573315" />
+      <entry key="H4" value="22.699700660426423" />
+      <entry key="D1" value="35.84607532200835" />
+      <entry key="W1" value="41.79439991574653" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -116,12 +127,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.dif_interface_test.executor": "Debug",
     "Python.fetch_stk_data.executor": "Debug",
+    "Python.fetch_stock (1).executor": "Run",
     "Python.fetch_stock.executor": "Run",
     "Python.stk.executor": "Debug",
+    "Python.test_akshare (1).executor": "Run",
     "Python.test_akshare.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -139,7 +153,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
@@ -147,32 +161,12 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\pyproject\stock_data_analysis" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\pyproject\stock_data_analysis\test" />
+      <recent name="C:\pyproject\stock_data_analysis\ingestion" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.fetch_stock">
-    <configuration name="dif_interface_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="stock_data_analysis" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dif_interface_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.fetch_stock (1)">
     <configuration name="fetch_stk_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="stock_data_analysis" />
       <option name="ENV_FILES" value="" />
@@ -188,7 +182,31 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fetch_stk_data.py" />
+      <option name="SCRIPT_NAME" value="C:\pyproject\stock_data_analysis\test\fetch_stk_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fetch_stock (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="stock_data_analysis" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ingestion" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ingestion/fetch_stock.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -212,7 +230,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fetch_stock.py" />
+      <option name="SCRIPT_NAME" value="C:\pyproject\stock_data_analysis\ingestion\fetch_stock.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -236,7 +254,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stk.py" />
+      <option name="SCRIPT_NAME" value="C:\pyproject\stock_data_analysis\test\stk.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -245,7 +263,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_akshare" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_akshare (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="stock_data_analysis" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -254,13 +272,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_akshare.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_akshare.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -271,11 +289,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.fetch_stock (1)" />
+        <item itemvalue="Python.test_akshare (1)" />
         <item itemvalue="Python.fetch_stock" />
         <item itemvalue="Python.stk" />
         <item itemvalue="Python.fetch_stk_data" />
-        <item itemvalue="Python.dif_interface_test" />
-        <item itemvalue="Python.test_akshare" />
       </list>
     </recent_temporary>
   </component>
@@ -294,38 +312,56 @@
       <option name="presentableId" value="Default" />
       <updated>1784971430726</updated>
     </task>
+    <task id="LOCAL-00001" summary="stock_data_pro first commit">
+      <option name="closed" value="true" />
+      <created>1785071900963</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1785071900963</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="stock_data_pro first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="stock_data_pro first commit" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
+          <url>file://$PROJECT_DIR$/test/main.py</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/fetch_stk_data.py</url>
+          <url>file://$PROJECT_DIR$/test/fetch_stk_data.py</url>
           <line>112</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/fetch_stock.py</url>
-          <line>100</line>
+          <url>file://$PROJECT_DIR$/ingestion/fetch_stock.py</url>
+          <line>109</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/fetch_stock.py</url>
-          <line>76</line>
+          <url>file://$PROJECT_DIR$/ingestion/fetch_stock.py</url>
+          <line>85</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/fetch_stock.py</url>
-          <line>63</line>
+          <url>file://$PROJECT_DIR$/ingestion/fetch_stock.py</url>
+          <line>72</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ingestion/fetch_stock.py</url>
+          <line>158</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

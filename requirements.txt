@@ -1,0 +1,5 @@
+akshare
+pandas
+psycopg[binary]
+python-dotenv
+dbt-postgres

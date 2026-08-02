@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 import akshare as ak
 import psycopg
 
-from config import STOCK_POOL, LOOKBACK_DAYS, REQUEST_INTERVAL
+from ingestion.config import STOCK_POOL, LOOKBACK_DAYS, REQUEST_INTERVAL
 
 # ---- 加载配置 ----
 load_dotenv()

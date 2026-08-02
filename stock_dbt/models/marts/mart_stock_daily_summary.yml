@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: mart_stock_daily_summary
+    description: "个股每日指标汇总表,含涨跌方向、均价等衍生指标"
+    columns:
+      - name: symbol
+        description: "股票代码"
+        data_tests:
+          - not_null
+      - name: trade_date
+        description: "交易日期"
+        data_tests:
+          - not_null
+      - name: price_direction
+        description: "当日涨跌方向"
+        data_tests:
+          - accepted_values:
+              values: ['up', 'down', 'flat']
+    data_tests:
+      # 组合唯一性:每只股票每天只有一条汇总记录
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - symbol
+            - trade_date

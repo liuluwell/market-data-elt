@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: public
+    tables:
+      - name: raw_stock_daily
+        description: "原始股票日线行情数据,ELT架构下的原始层"
+        columns:
+          - name: symbol
+            description: "股票代码"
+            data_tests:
+              - not_null
+          - name: trade_date
+            description: "交易日期"
+            data_tests:
+              - not_null
