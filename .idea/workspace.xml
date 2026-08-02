@@ -4,24 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11550465-ce35-4094-b006-28ac55a6af8f" name="Changes" comment="stock_data_pro first commit">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_dbt/dbt_project.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_dbt/models/stagings/source.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_dbt/models/stagings/stg_stock_daily.sql" afterDir="false" />
+    <list default="true" id="11550465-ce35-4094-b006-28ac55a6af8f" name="Changes" comment="stock_data_pro  staging and marts first commit $ fetch data bug fix">
+      <change afterPath="$PROJECT_DIR$/stock_dw/stock_dbt/models/marts/mart_stock_daily_summary.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_dw/stock_dbt/models/marts/mart_stock_daily_summary.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_dw/stock_dbt/models/stagings/source.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_dw/stock_dbt/models/stagings/stg_stock_daily.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dif_interface_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/dif_interface_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fetch_stk_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/fetch_stk_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fetch_stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion/fetch_stock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/1.raw_stock_daily.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion/sql/1.raw_stock_daily.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/2.raw_stock_basic_info.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion/sql/2.raw_stock_basic_info.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stk.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/stk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_akshare.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_akshare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_dbt/dbt_project.yml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_dbt/dbt_project.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,61 +48,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0089183285122019" />
-      <entry key="MS500" value="1.500347050651707" />
-      <entry key="S2" value="3.00281252611563" />
-      <entry key="S5" value="4.295415395560866" />
-      <entry key="S10" value="5.359421498045559" />
-      <entry key="S30" value="6.793421554158893" />
-      <entry key="S60" value="7.339125499881249" />
-      <entry key="M2" value="7.653454154281475" />
-      <entry key="M5" value="7.873100116402058" />
-      <entry key="M10" value="8.415184264006243" />
-      <entry key="M15" value="9.478884213640464" />
-      <entry key="M30" value="12.761857239366345" />
-      <entry key="H1" value="16.46251074610819" />
-      <entry key="H2" value="19.401441273238042" />
-      <entry key="H4" value="22.397571428003893" />
-      <entry key="D1" value="33.24514878870795" />
-      <entry key="W1" value="38.0329462054981" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000023376656004" />
+      <entry key="S5" value="1.005591302054554" />
+      <entry key="S10" value="1.0747750520668713" />
+      <entry key="S30" value="1.427422248844305" />
+      <entry key="S60" value="1.781566788587797" />
+      <entry key="M2" value="2.4326082911222846" />
+      <entry key="M5" value="3.5360352731532863" />
+      <entry key="M10" value="4.567593595512798" />
+      <entry key="M15" value="5.724825892814221" />
+      <entry key="M30" value="9.74069390790495" />
+      <entry key="H1" value="16.51037454833301" />
+      <entry key="H2" value="23.883781036576533" />
+      <entry key="H4" value="30.49692846626224" />
+      <entry key="D1" value="45.7474092350287" />
+      <entry key="W1" value="51.78840744432983" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="3.8626055744294654E-269" />
-      <entry key="M2" value="1.1871228978728242E-134" />
-      <entry key="M5" value="6.118529836555692E-54" />
-      <entry key="M10" value="4.9393397534186346E-27" />
-      <entry key="M15" value="4.602398293805566E-18" />
-      <entry key="M30" value="4.289916642451703E-9" />
-      <entry key="H1" value="1.309894422110368E-4" />
-      <entry key="H2" value="0.022889886141049972" />
-      <entry key="H4" value="0.3025872938457107" />
-      <entry key="D1" value="2.601307050510273" />
-      <entry key="W1" value="3.7615297898715285" />
+      <entry key="MS500" value="2.0305183089896123E-169" />
+      <entry key="S2" value="6.712769385970468E-43" />
+      <entry key="S5" value="1.3513277367258181E-17" />
+      <entry key="S10" value="3.6760409909654415E-9" />
+      <entry key="S30" value="0.0015433346796921836" />
+      <entry key="S60" value="0.03928529851855759" />
+      <entry key="M2" value="0.19820519296566777" />
+      <entry key="M5" value="0.5234148156579743" />
+      <entry key="M10" value="0.7234741292250708" />
+      <entry key="M15" value="0.8059015737192264" />
+      <entry key="M30" value="0.8977202096753978" />
+      <entry key="H1" value="0.947531383963854" />
+      <entry key="H2" value="0.9875852322021883" />
+      <entry key="H4" value="1.2249209716381457" />
+      <entry key="D1" value="3.4975771524029193" />
+      <entry key="W1" value="4.739885461735751" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9415289301539543" />
-      <entry key="MS500" value="1.481695875887743" />
-      <entry key="S2" value="2.9938558953571386" />
-      <entry key="S5" value="4.289461203782607" />
-      <entry key="S10" value="5.354933435414369" />
-      <entry key="S30" value="6.791093416847096" />
-      <entry key="S60" value="7.337790462287518" />
-      <entry key="M2" value="7.652736339487112" />
-      <entry key="M5" value="7.872787476949806" />
-      <entry key="M10" value="8.414840350131724" />
-      <entry key="M15" value="9.47838082596767" />
-      <entry key="M30" value="12.761175269668627" />
-      <entry key="H1" value="16.46205652996004" />
-      <entry key="H2" value="19.423910168573315" />
-      <entry key="H4" value="22.699700660426423" />
-      <entry key="D1" value="35.84607532200835" />
-      <entry key="W1" value="41.79439991574653" />
+      <entry key="MS100" value="0.9460576467255959" />
+      <entry key="MS500" value="0.9889709163809315" />
+      <entry key="S2" value="0.9972335720657968" />
+      <entry key="S5" value="1.0044666274888652" />
+      <entry key="S10" value="1.0741119268775159" />
+      <entry key="S30" value="1.42846678098396" />
+      <entry key="S60" value="1.819198553242853" />
+      <entry key="M2" value="2.627112254425564" />
+      <entry key="M5" value="4.055607525923661" />
+      <entry key="M10" value="5.288310839659611" />
+      <entry key="M15" value="6.528538926117709" />
+      <entry key="M30" value="10.63691297861363" />
+      <entry key="H1" value="17.45684461233742" />
+      <entry key="H2" value="24.870640370161134" />
+      <entry key="H4" value="31.72124250807288" />
+      <entry key="D1" value="49.24457756297532" />
+      <entry key="W1" value="56.52821103805679" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -147,7 +136,7 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/pyproject/stock_data_analysis",
+    "last_opened_file_path": "C:/pyproject/stock_data_analysis/stock_dw/stock_dbt/models",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -320,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785071900963</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="stock_data_pro  staging and marts first commit $ fetch data bug fix">
+      <option name="closed" value="true" />
+      <created>1785657947898</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1785657947898</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +325,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="stock_data_pro first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="stock_data_pro first commit" />
+    <MESSAGE value="stock_data_pro  staging and marts first commit $ fetch data bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="stock_data_pro  staging and marts first commit $ fetch data bug fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
