@@ -1,6 +1,6 @@
 STOCK_POOL = ["000001", "600519", "300750"]
 LOOKBACK_DAYS = 365
-REQUEST_INTERVAL = 2          # 请求间隔拉长到2秒,保护接口
+REQUEST_INTERVAL = 2          # request interval extended to 2s to protect the API
 
-# 数据源优先级:先尝试第一个,失败了自动尝试下一个
-DATA_SOURCE_PRIORITY = ["tx", "em"]   # 腾讯优先,东财备用
+# Data source priority: try the first; if it fails, automatically try the next
+DATA_SOURCE_PRIORITY = ["tx", "em"]   # Tencent primary, EastMoney fallback

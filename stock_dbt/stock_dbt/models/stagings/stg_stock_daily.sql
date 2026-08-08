@@ -4,16 +4,14 @@
   )
 }}
 
--- staging 层:对原始行情数据做清洗和标准化
--- 字段从中文改为英文命名,过滤明显异常数据
+-- staging layer: clean and standardize the raw market data
+-- rename fields to English and filter out obviously invalid records
 
 select
     symbol,
     trade_date,
     open        as open_price,
     close       as close_price,
-
-
     high        as high_price,
     low         as low_price,
     volume,
@@ -27,7 +25,7 @@ select
 
 from {{ source('raw', 'raw_stock_daily') }}
 
--- 基本的数据质量过滤:排除掉明显不合理的记录
+-- basic data quality filter: exclude clearly unreasonable records
 where close > 0
   and open > 0
   and high >= low

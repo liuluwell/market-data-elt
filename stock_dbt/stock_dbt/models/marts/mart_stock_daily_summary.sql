@@ -4,8 +4,9 @@
   )
 }}
 
--- 个股每日指标汇总:在清洗后的明细基础上,补充一些便于分析的衍生指标
--- 物化为 table(不是 view),因为 marts 层是给分析/查询用的,物化成表查询更快
+-- Per-stock daily summary: adds analysis-friendly derived metrics on top of the cleaned detail data.
+-- Materialized as a table (not a view) because the marts layer is used for analysis/queries,
+-- and a physical table is faster to query.
 
 select
     symbol,
@@ -20,14 +21,14 @@ select
     amplitude,
     turnover_rate,
 
-    -- 衍生指标1:当日是涨还是跌(便于统计上涨家数)
+    -- Derived metric 1: whether the stock rose or fell today (for counting advancers)
     case
         when pct_change > 0 then 'up'
         when pct_change < 0 then 'down'
         else 'flat'
     end as price_direction,
 
-    -- 衍生指标2:当日均价(用成交额/成交量估算,注意成交量单位是手,要乘100换成股)
+    -- Derived metric 2: daily average price (estimated as amount / shares; volume is in lots, so x100 to get shares)
     case
         when volume > 0 then round(amount / (volume * 100), 2)
         else null

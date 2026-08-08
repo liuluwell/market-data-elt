@@ -5,13 +5,13 @@ sources:
     schema: public
     tables:
       - name: raw_stock_daily
-        description: "原始股票日线行情数据,ELT架构下的原始层"
+        description: "Raw daily stock market data; the raw layer in the ELT architecture"
         columns:
           - name: symbol
-            description: "股票代码"
+            description: "Stock code"
             data_tests:
               - not_null
           - name: trade_date
-            description: "交易日期"
+            description: "Trade date"
             data_tests:
               - not_null

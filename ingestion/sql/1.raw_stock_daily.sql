@@ -1,3 +1,4 @@
+
 CREATE TABLE IF NOT EXISTS raw_stock_daily (
     id             bigserial PRIMARY KEY,
     symbol         text NOT NULL,
@@ -6,13 +7,13 @@ CREATE TABLE IF NOT EXISTS raw_stock_daily (
     close          numeric,
     high           numeric,
     low            numeric,
-    volume         numeric,      -- 统一单位:手
-    amount         numeric,      -- 统一单位:元
-    amplitude      numeric,      -- 振幅(%),自行计算
-    pct_change     numeric,      -- 涨跌幅(%),自行计算
-    price_change   numeric,      -- 涨跌额,自行计算
-    turnover_rate  numeric,      -- 换手率(%),仅东财提供,腾讯为NULL
-    data_source    text,         -- 记录这条数据来自哪个数据源,便于追溯
+    volume         numeric,      -- unit: lot (100 shares)
+    amount         numeric,      -- unit: CNY
+    amplitude      numeric,      -- amplitude (%), computed in-pipeline
+    pct_change     numeric,      -- daily change (%), computed in-pipeline
+    price_change   numeric,      -- daily price change, computed in-pipeline
+    turnover_rate  numeric,      -- turnover rate (%); provided by EastMoney only, NULL for Tencent
+    data_source    text,         -- which source this record came from, for traceability
     fetched_at     timestamp DEFAULT now(),
     UNIQUE(symbol, trade_date)
 );
